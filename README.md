@@ -7,7 +7,7 @@ FUTURE: (re)learn how to make make files and drop that biz in the mix
 FORNOW: just the source code and resultant compiled exec of the same
 
 
-
+```
 Usage: rng [bondxluazcys] [#]
 
 # - number of characters
@@ -26,4 +26,4 @@ c - "printable" ascii
 y - non-alphanumeric "printable" ascii
 s - any ascii
 no args - random number of chars from random class
-
+```
