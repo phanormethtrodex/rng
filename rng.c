@@ -158,6 +158,6 @@ int rout (int rtype, int rcount, char *rchars) {
 		break;
 	}
   if (ret==0)
-    *(rchars+rcount) = '\n';
+    *(rchars+rcount) = '\0';
   return ret;
 }
