@@ -3,11 +3,27 @@
 #include <time.h>
 
 /* rng.c
+ * #####
  * author: austin stewart (phanormethtrodex)
  *   date: 30/12/2023
  *  descr: the latest and greatest iteration of the rng
  *         finally a version controlled sorcery
  *         hereby putting an end to endless mutations rumaging
+ * #####
+ *
+ *    log: -------------------------------------------------------------------
+ *    
+ *         1.00 -- 30.12.23
+ *         initial version
+ *
+ *         1.01 -- 31.12.23
+ *         fixed bug 'newline-terminating' the rngstring; now null-terminating
+ *
+ *         1.02 -- 17.01.24
+ *         added this changelog
+ *
+ * #####
+ *
  */
 
 int isnum(char);
@@ -43,8 +59,8 @@ int main(int argc, char *argv[])
 	//printf("now: %i nnow: %i exactly now: %g\n",(unsigned int)time(NULL),seed,(unsigned int)time(NULL)+seed);
 	//srand(seed);
 
-	char type;
-	int k,carg,ret,count=0;
+	int type;
+  int carg,ret,count=0;
   char *rstr;
 
 	if (argc>1) {
@@ -102,22 +118,22 @@ int rout (int rtype, int rcount, char *rchars) {
 
 	switch (rtype) {
 	case 'b':
-    for (i=0;i<rcount;i++) {k=rgen(2); *(rchars+i) = k+'0';} //printf("%i",k);}
+    for (i=0;i<rcount;i++) {k=rgen(2); *(rchars+i) = k+'0';}
     //*(rchars+rcount) = '\n';
     //printf("%s",rchars);
     //caller shall spit out the generated string
 		ret = 0; break;
 	case 'o':
 		//for (i=0;i<rcount;i++) {k=rgen(8); printf("%i",k);}
- 		for (i=0;i<rcount;i++) {k=rgen(8); *(rchars+i) = k+'0';} //printf("%i",k);}
+ 		for (i=0;i<rcount;i++) {k=rgen(8); *(rchars+i) = k+'0';}
 		ret = 0; break;
 	case 'n':
 		//for (i=0;i<rcount;i++) {k=rgen(9); printf("%i",k+1);}
- 		for (i=0;i<rcount;i++) {k=rgen(9); *(rchars+i) = k+'0'+1;} //printf("%i",k+1);}
+ 		for (i=0;i<rcount;i++) {k=rgen(9); *(rchars+i) = k+'0'+1;}
 		ret = 0; break;
 	case 'd':
 		//for (i=0;i<rcount;i++) {k=rgen(10); printf("%i",k);}
- 		for (i=0;i<rcount;i++) {k=rgen(10); *(rchars+i) = k+'0';} //printf("%i",k);}
+ 		for (i=0;i<rcount;i++) {k=rgen(10); *(rchars+i) = k+'0';}
 		ret = 0; break;
 	case 'x':
 		//for (i=0;i<rcount;i++) {k=rgen(16); printf("%c",k<10?k+'0':k-10+'a');}
@@ -125,11 +141,11 @@ int rout (int rtype, int rcount, char *rchars) {
 		ret = 0; break;
 	case 'l':
 		//for (i=0;i<rcount;i++) {k=rgen(26); printf("%c",k+'a');}
- 		for (i=0;i<rcount;i++) {k=rgen(26); *(rchars+i) = k+'a';} //printf("%c",k+'a');}
+ 		for (i=0;i<rcount;i++) {k=rgen(26); *(rchars+i) = k+'a';}
 		ret = 0; break;
 	case 'u':
 		//for (i=0;i<rcount;i++) {k=rgen(26); printf("%c",k+'A');}
- 		for (i=0;i<rcount;i++) {k=rgen(26); *(rchars+i) = k+'A';} //printf("%c",k+'A');}
+ 		for (i=0;i<rcount;i++) {k=rgen(26); *(rchars+i) = k+'A';}
 		ret = 0; break;
 	case 'a':
 		//for (i=0;i<rcount;i++) {k=rgen(52); printf("%c",k<26?k+'a':k-26+'A');}
@@ -141,7 +157,7 @@ int rout (int rtype, int rcount, char *rchars) {
 		ret = 0; break;
 	case 'c':
 		//for (i=0;i<rcount;i++) {k=rgen(94); printf("%c",k+33);}
- 		for (i=0;i<rcount;i++) {k=rgen(94); *(rchars+i) = k+33;} //printf("%c",k+33);}
+ 		for (i=0;i<rcount;i++) {k=rgen(94); *(rchars+i) = k+33;}
 		ret = 0; break;
 	case 'y':
 		//for (i=0;i<rcount;i++) {k=rgen(32); printf("%c",k<15?k+'!':k<22?k-15+':':k<28?k-22+'[':k-28+'{');}
@@ -149,7 +165,7 @@ int rout (int rtype, int rcount, char *rchars) {
 		ret = 0; break;
 	case 's':
 		//for (i=0;i<rcount;i++) {k=rgen(128); printf("%c",k);}
- 		for (i=0;i<rcount;i++) {k=rgen(128); *(rchars+i) = k;} //printf("%c",k);}
+ 		for (i=0;i<rcount;i++) {k=rgen(128); *(rchars+i) = k;}
 		ret = 0; break;
 	default:
 		//printf("\nUsage: rng [bondxluazcys] [#]\n\n");
