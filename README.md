@@ -1,11 +1,20 @@
 # rng
-its an rng, what more could you ask for?
+its an rng, what more could you ask for? 
+can generate a stream of chars (ASCII) in a wide variety of formats/charsets - binary, hex, alphanuma, ASCII symbols (non-alphanuma, printable), or even any possible ASCII (including newlines, backspaces, bells, /etc/..
+
+FUTURE: add feature/option to generate raw bit streams (not just ASCII chars)
+
 
 coded in C; coded by me
 
 FUTURE: (re)learn how to make make files and drop that biz in the mix
 FORNOW: just the source code and resultant compiled exec of the same
 
+reqs: 
+a C compiler (in order to recompile from source)
+realtime clock libraries
+a CPU with a realtime clock
+available entropy pool
 
 ```
 Usage: rng [bondxluazcys] [#]
