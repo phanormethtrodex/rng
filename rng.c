@@ -22,6 +22,9 @@
  *         1.02 -- 17.01.24
  *         added this changelog
  *
+ *         1.03 -- 16.05.24
+ *         updated this changelog
+ *
  * #####
  *
  */
