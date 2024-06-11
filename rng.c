@@ -25,6 +25,9 @@
  *         1.03 -- 16.05.24
  *         updated this changelog
  *
+ *         1.04 -- 11.06.24
+ *         testing a native (re)compile
+ *
  * #####
  *
  */

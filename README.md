@@ -10,6 +10,9 @@ coded in C; coded by me
 FUTURE: (re)learn how to make make files and drop that biz in the mix
 FORNOW: just the source code and resultant compiled exec of the same
 
+NOW: offering compiled executables compatible with three or more (or less..) architecture options! Such as: ARM, WIN/DOS, & UNIX!
+..just recompile it from source!
+
 reqs: 
 a C compiler (in order to recompile from source)
 realtime clock libraries
