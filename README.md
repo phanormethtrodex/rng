@@ -16,6 +16,8 @@ NOW: offering compiled executables compatible with three or more (or less..) arc
 
 ## RELEASE NOTES
 ###VERSIONS
+####HISTORY
+#####FIXES
 LATEST VERSION: 1.0.4
   CHANGES FROM: 1.0.3
   -none
