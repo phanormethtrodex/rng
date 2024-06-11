@@ -13,6 +13,8 @@ FORNOW: just the source code and resultant compiled exec of the same
 NOW: offering compiled executables compatible with three or more (or less..) architecture options! Such as: ARM, WIN/DOS, & UNIX!
 ..just compile it from source!
 
+LATEST VERSION: 1.04
+
 reqs: 
 a C compiler (in order to recompile from source)
 realtime clock libraries
