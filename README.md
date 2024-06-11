@@ -10,6 +10,18 @@ coded in C; coded by me
 FUTURE: (re)learn how to make make files and drop that biz in the mix
 FORNOW: just the source code and resultant compiled exec of the same
 
+NOW: offering compiled executables compatible with three or more (or less..) architecture options! Such as: ARM, WIN/DOS, & UNIX!
+..just compile it from source!
+
+
+## RELEASE NOTES
+###VERSIONS
+####HISTORY
+#####FIXES
+LATEST VERSION: 1.0.4
+  CHANGES FROM: 1.0.3
+  -none
+
 reqs: 
 a C compiler (in order to recompile from source)
 realtime clock libraries
