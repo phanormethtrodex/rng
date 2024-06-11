@@ -14,6 +14,8 @@ NOW: offering compiled executables compatible with three or more (or less..) arc
 ..just compile it from source!
 
 LATEST VERSION: 1.0.4
+  CHANGES FROM: 1.0.3
+  -none
 
 reqs: 
 a C compiler (in order to recompile from source)
