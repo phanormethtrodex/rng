@@ -13,6 +13,8 @@ FORNOW: just the source code and resultant compiled exec of the same
 NOW: offering compiled executables compatible with three or more (or less..) architecture options! Such as: ARM, WIN/DOS, & UNIX!
 ..just compile it from source!
 
+## RELEASE NOTES
+
 LATEST VERSION: 1.0.4
   CHANGES FROM: 1.0.3
   -none
