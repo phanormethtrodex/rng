@@ -13,19 +13,19 @@
  *
  *    log: -------------------------------------------------------------------
  *    
- *         1.00 -- 30.12.23
+ *         1.0.0 -- 30.12.23
  *         initial version
  *
- *         1.01 -- 31.12.23
+ *         1.0.1 -- 31.12.23
  *         fixed bug 'newline-terminating' the rngstring; now null-terminating
  *
- *         1.02 -- 17.01.24
+ *         1.0.2 -- 17.01.24
  *         added this changelog
  *
- *         1.03 -- 16.05.24
+ *         1.0.3 -- 16.05.24
  *         updated this changelog
  *
- *         1.04 -- 11.06.24
+ *         1.0.4 -- 11.06.24
  *         testing a native (re)compile
  *
  * #####
