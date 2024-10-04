@@ -28,6 +28,9 @@
  *         1.0.4 -- 11.06.24
  *         testing a native (re)compile
  *
+ *         1.0.5 -- 10.04.24
+ *         recompiled \n-\0 bugged arm version
+ *
  * #####
  *
  */
