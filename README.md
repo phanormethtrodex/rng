@@ -43,6 +43,7 @@ o - octal
 n - "nonal" (1-9)
 d - decimal
 x - hexadecimal
+X = HEXADECIMAL
 l - lower
 u - upper
 a - alpha
