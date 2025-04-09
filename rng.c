@@ -31,6 +31,10 @@
  *         1.0.5 -- 10.04.24
  *         recompiled \n-\0 bugged arm version
  *
+ *         1.0.6 -- 09.04.25
+ *         adding HEX option (X)
+ *
+ *
  * #####
  *
  */
@@ -85,7 +89,7 @@ int main(int argc, char *argv[])
 			//printf("HIT ELSE IF\n");
 		}
 		else {
-			printf("\nUsage: rng [bondxluazcys] [#]\n\n# - number of characters\n\n[bondxluazcys] - character class:\nb - binary \no - octal\nn - \"nonal\" (1-9)\nd - decimal\nx - hexadecimal\nl - lower\nu - upper\na - alpha\nz - alphanumeric\nc - \"printable\" ascii\ny - non-alphanumeric \"printable\" ascii\ns - any ascii\nno args - random number of chars from random class\n\n");
+			printf("\nUsage: rng [bondxXluazcys] [#]\n\n# - number of characters\n\n[bondxXluazcys] - character class:\nb - binary \no - octal\nn - \"nonal\" (1-9)\nd - decimal\nx - hexadecimal\nX - HEXADECIMAL\nl - lower\nu - upper\na - alpha\nz - alphanumeric\nc - \"printable\" ascii\ny - non-alphanumeric \"printable\" ascii\ns - any ascii\nno args - random number of chars from random class\n\n");
 			//printf("HIT ELSE\n");
 			return 1;
 		}
@@ -98,8 +102,8 @@ int main(int argc, char *argv[])
 	}
 	else {
 		count=rgen(15)+1;
-		type=rgen(11);
-		char sets[]="bondxluazcys";
+		type=rgen(12);
+		char sets[]="bondxXluazcys";
     rstr = (char *)malloc(sizeof(char)*(count+1));
     ret = rout(sets[type],count,rstr);
 	}
@@ -110,7 +114,7 @@ int main(int argc, char *argv[])
 
 int isnum(char c) {return (c>='0'&&c<='9');}
 
-int ischr(char c) {return (c>='a'&&c<='z');}
+int ischr(char c) {return (c>='a'&&c<='z'||c=='X');}
 
 /* rgen: generates number [0-arg) */
 //int rgen (int range) {return (lrand48()%range);}
@@ -148,6 +152,10 @@ int rout (int rtype, int rcount, char *rchars) {
 		//for (i=0;i<rcount;i++) {k=rgen(16); printf("%c",k<10?k+'0':k-10+'a');}
  		for (i=0;i<rcount;i++) {k=rgen(16); *(rchars+i) = k<10?k+'0':k-10+'a';}
 		ret = 0; break;
+	case 'X':
+		//for (i=0;i<rcount;i++) {k=rgen(16); printf("%c",k<10?k+'0':k-10+'a');}
+ 		for (i=0;i<rcount;i++) {k=rgen(16); *(rchars+i) = k<10?k+'0':k-10+'A';}
+		ret = 0; break;
 	case 'l':
 		//for (i=0;i<rcount;i++) {k=rgen(26); printf("%c",k+'a');}
  		for (i=0;i<rcount;i++) {k=rgen(26); *(rchars+i) = k+'a';}
@@ -177,8 +185,8 @@ int rout (int rtype, int rcount, char *rchars) {
  		for (i=0;i<rcount;i++) {k=rgen(128); *(rchars+i) = k;}
 		ret = 0; break;
 	default:
-		//printf("\nUsage: rng [bondxluazcys] [#]\n\n");
-		printf("\nUsage: rng [bondxluazcys] [#]\n\n# - number of characters\n\n[bondxluazcys] - character class:\nb - binary \no - octal\nn - \"nonal\" (1-9)\nd - decimal\nx - hexadecimal\nl - lower\nu - upper\na - alpha\nz - alphanumeric\nc - \"printable\" ascii\ny - non-alphanumeric \"printable\" ascii\ns - any ascii\nno args - random number of chars from random class\n\n");
+		//printf("\nUsage: rng [bondxXluazcys] [#]\n\n");
+		printf("\nUsage: rng [bondxXluazcys] [#]\n\n# - number of characters\n\n[bondxXluazcys] - character class:\nb - binary \no - octal\nn - \"nonal\" (1-9)\nd - decimal\nx - hexadecimal\nX - HEXADECIMAL\nl - lower\nu - upper\na - alpha\nz - alphanumeric\nc - \"printable\" ascii\ny - non-alphanumeric \"printable\" ascii\ns - any ascii\nno args - random number of chars from random class\n\n");
 		ret = 99;
 		break;
 	}
