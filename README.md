@@ -24,7 +24,7 @@ LATEST VERSION: 1.0.5
 CHANGES FROM: 1.0.4
 
 -none
--NOTE: re-ARMED
+-NOTE: RE-re-ARMED
 
 reqs: 
 a C compiler (in order to recompile from source)
